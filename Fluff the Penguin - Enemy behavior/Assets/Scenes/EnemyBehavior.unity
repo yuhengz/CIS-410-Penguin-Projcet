@@ -124,7 +124,7 @@ GameObject:
   m_Layer: 0
   m_Name: PigSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 58ba3940a41600642925e750d5c473bf, type: 3}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -136,7 +136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17429819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 4, z: 20}
+  m_LocalPosition: {x: -134, y: 4, z: 111}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   m_Layer: 0
   m_Name: MushroomSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 3001e34bd182868479ad82c774ed8a54, type: 3}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -235,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272986064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 4, z: 20}
+  m_LocalPosition: {x: 114, y: 4, z: 114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -326,8 +326,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278339561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 50}
-  m_LocalScale: {x: 110, y: 20, z: 10}
+  m_LocalPosition: {x: 0, y: 10, z: 150}
+  m_LocalScale: {x: 300, y: 20, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -534,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: -0.9063079, z: 0.42261827, w: 0}
-  m_LocalPosition: {x: 0, y: 40, z: 30}
+  m_LocalPosition: {x: 0, y: 50, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -639,8 +639,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556517071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50, y: 10, z: 0}
-  m_LocalScale: {x: 10, y: 30, z: 100}
+  m_LocalPosition: {x: -150, y: 10, z: 0}
+  m_LocalScale: {x: 10, y: 30, z: 300}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -736,7 +736,7 @@ GameObject:
   m_Layer: 0
   m_Name: PufferFishSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 6b68758abfb283f43bc003cfb3bca59e, type: 3}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -748,7 +748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584260440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 4, z: -20}
+  m_LocalPosition: {x: -140, y: 4, z: -133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -841,7 +841,7 @@ Transform:
   m_GameObject: {fileID: 717692596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 30, y: 20, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -858,7 +858,7 @@ GameObject:
   m_Layer: 0
   m_Name: PlantSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 15fc105fcfe96474a8cb741ddba37456, type: 3}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -870,7 +870,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721126214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 4, z: -20}
+  m_LocalPosition: {x: 109, y: 4, z: -130}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -967,7 +967,7 @@ GameObject:
   m_Layer: 0
   m_Name: CactusSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 75fe73e3a3e49294099a4247ca546420, type: 3}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -979,7 +979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622993754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 20}
+  m_LocalPosition: {x: -8, y: 4, z: 115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1070,8 +1070,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917834155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: -50}
-  m_LocalScale: {x: 110, y: 30, z: 20}
+  m_LocalPosition: {x: 0, y: 10, z: -150}
+  m_LocalScale: {x: 300, y: 30, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1161,8 +1161,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994610954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: 10, z: 0}
-  m_LocalScale: {x: 10, y: 30, z: 100}
+  m_LocalPosition: {x: 150, y: 10, z: 0}
+  m_LocalScale: {x: 10, y: 30, z: 300}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1321,26 +1321,6 @@ PrefabInstance:
     - target: {fileID: 4312871532925972, guid: 6181c77aa0f81f04fa767137dbb0d7c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65705136467057329, guid: 6181c77aa0f81f04fa767137dbb0d7c3,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 65705136467057329, guid: 6181c77aa0f81f04fa767137dbb0d7c3,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65705136467057329, guid: 6181c77aa0f81f04fa767137dbb0d7c3,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65705136467057329, guid: 6181c77aa0f81f04fa767137dbb0d7c3,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4086036893540489753, guid: 6181c77aa0f81f04fa767137dbb0d7c3,
         type: 3}

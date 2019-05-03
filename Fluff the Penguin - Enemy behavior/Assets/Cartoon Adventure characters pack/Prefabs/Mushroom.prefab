@@ -612,8 +612,8 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771810594153214}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.16133392, y: 2.111308, z: 0.024345398}
-  m_Size: 4.997405
+  m_LocalReferencePoint: {x: -0.17783928, y: 2.1162372, z: 0.030536652}
+  m_Size: 4.9547806
   m_FadeMode: 0
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
@@ -621,11 +621,11 @@ LODGroup:
   - screenRelativeHeight: 0.6
     fadeTransitionWidth: 0
     renderers:
-    - renderer: {fileID: 137350477691766436}
+    - renderer: {fileID: 137542801244212142}
   - screenRelativeHeight: 0.3
     fadeTransitionWidth: 0
     renderers:
-    - renderer: {fileID: 137921159394416634}
+    - renderer: {fileID: 137542801244212142}
   - screenRelativeHeight: 0.1
     fadeTransitionWidth: 0
     renderers:
@@ -659,7 +659,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.5
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 2.3, z: 0}
 --- !u!136 &1476918428
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -671,9 +671,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 2
-  m_Height: 5
+  m_Height: 4.8
   m_Direction: 1
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 2.3, z: 0}
 --- !u!114 &1476918425
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,11 +21,13 @@ public class EnemyManager : MonoBehaviour
     {
         if (count >= 1)
         {
+            CancelInvoke();
             return;
         }
 
         if (penHP.curHealth <= 0)
         {
+            CancelInvoke();
             return;
         }
 
