@@ -11,8 +11,7 @@ public class EnemyManager : MonoBehaviour
     public int maxSpawn = 1;
     public Transform[] spawnPoints;
 
-    // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }

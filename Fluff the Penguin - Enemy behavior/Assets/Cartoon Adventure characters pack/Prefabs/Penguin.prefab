@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 65705136467057329}
   - component: {fileID: 5382405891516675133}
   - component: {fileID: 4086036893540489753}
+  - component: {fileID: 8910309208264201063}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Player
@@ -545,6 +546,7 @@ Transform:
   - {fileID: 4918522229723896}
   - {fileID: 4506258528566290}
   - {fileID: 4682980926745286}
+  - {fileID: 4113242090547131981}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -636,6 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca55e92f7b6e4930a66cfaecd976f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grounded: 0
 --- !u!114 &4086036893540489753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,3 +655,50 @@ MonoBehaviour:
   curHealth: 0
   HP: {fileID: 0}
   GameOver: {fileID: 0}
+--- !u!114 &8910309208264201063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918499584636524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 363f91a4d82584073800dab25ebc4088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1584389629031008945, guid: 644c7c29f996b4508962d557ee0c6cbb,
+    type: 3}
+  fireTrans: {fileID: 4113242090547131981}
+  throwForce: 15
+  BetweenAtks: 0.5
+--- !u!1 &8987995848160795785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4113242090547131981}
+  m_Layer: 0
+  m_Name: ProjectileTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4113242090547131981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8987995848160795785}
+  m_LocalRotation: {x: -0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 6, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4312871532925972}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -10, y: 0, z: 0}

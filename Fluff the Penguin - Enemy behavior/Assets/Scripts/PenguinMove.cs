@@ -10,13 +10,24 @@ public class PenguinMove : MonoBehaviour
     private float turnInput;
     private float move;
     private float jumpForce = 12f;
+    private PenguinHealth penHP;
     Animator anim;
 
+    public bool grounded;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        penHP = GetComponent<PenguinHealth>();
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == ("Ground") && grounded == false)
+        {
+            grounded = true;
+        }
     }
 
     // Update is called once per frame
@@ -25,20 +36,50 @@ public class PenguinMove : MonoBehaviour
         move = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
 
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            grounded = false;
+        }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         float v = Input.GetAxisRaw("Vertical");
         // Adjust the rigidbodies position and orientation in FixedUpdate.
         Move();
         Turn();
-        Jump();
 
         Animating(v);
     }
 
-    private void Move()
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Speed-up"))
+        {
+            other.gameObject.SetActive(false);
+            speed = 2.0f * speed;
+        }
+        else if (other.gameObject.CompareTag("Guide"))
+        {
+            other.gameObject.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("Health"))
+        {
+            other.gameObject.SetActive(false);
+            penHP.curHealth += 20;
+        }
+        else if (other.gameObject.CompareTag("Checkpoint"))
+        {
+            other.gameObject.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("Power-up"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
+
+    void Move()
     {
         // Create a vector in the direction the tank is facing with a magnitude based on the input, speed and the time between frames.
         Vector3 movement = transform.forward * move * speed * Time.deltaTime;
@@ -47,7 +88,7 @@ public class PenguinMove : MonoBehaviour
         rb.MovePosition(rb.position + movement);
     }
 
-    private void Turn()
+    void Turn()
     {
         // Determine the number of degrees to be turned based on the input, speed and time between frames.
         float turn = turnInput * turnspd * Time.deltaTime;
@@ -57,15 +98,6 @@ public class PenguinMove : MonoBehaviour
 
         // Apply this rotation to the rigidbody's rotation.
         rb.MoveRotation(rb.rotation * turnRotation);
-    }
-
-    void Jump()
-    {
-        Vector3 jump = new Vector3(move, 0.0f, turnInput);
-
-        if (Input.GetKeyDown(KeyCode.Space)){
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
     }
 
     void Animating(float v)

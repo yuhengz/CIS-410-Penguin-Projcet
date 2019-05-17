@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4420510452781342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R-Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4183911574728012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4976638085735618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R-Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4227927486932428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L-Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4687046241707796}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boddy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4514937915753904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4469876375328800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4551651243730628}
   - component: {fileID: 137072628870838638}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cactus_mesh_LOD_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4776620798498580}
   - component: {fileID: 137456254181510668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cactus_mesh_LOD_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4602344394791060}
   - component: {fileID: 137898220468676928}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cactus_mesh_LOD_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4220894570721048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L-Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,14 +521,14 @@ GameObject:
   - component: {fileID: 95883558595730824}
   - component: {fileID: 205763229936090012}
   - component: {fileID: 7602514806235902747}
-  - component: {fileID: 853811489}
   - component: {fileID: 853811491}
   - component: {fileID: 853811490}
   - component: {fileID: 1560909631598662328}
   - component: {fileID: 853811493}
-  m_Layer: 0
+  - component: {fileID: 1204973656455726429}
+  m_Layer: 9
   m_Name: Cactus
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -613,20 +613,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!136 &853811489
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960825160328048}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 4
-  m_Height: 9
-  m_Direction: 1
-  m_Center: {x: 0, y: 4, z: 0}
 --- !u!135 &853811491
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -688,3 +674,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fed50b4dcded4fe1837d3159db5c7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1204973656455726429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960825160328048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d0dcfd40b9342f380187dbcbc2695b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 1
+  curHealth: 0

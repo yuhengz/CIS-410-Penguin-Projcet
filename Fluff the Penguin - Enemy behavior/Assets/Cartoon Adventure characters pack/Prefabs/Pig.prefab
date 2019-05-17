@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 205076690528088264}
   - component: {fileID: 6771420535492448457}
   - component: {fileID: 936016058}
-  - component: {fileID: 936016059}
   - component: {fileID: 936016056}
   - component: {fileID: 936016057}
   - component: {fileID: 936016060}
-  m_Layer: 0
+  - component: {fileID: 455202842248675287}
+  m_Layer: 9
   m_Name: Pig
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,20 +117,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.5
   m_Center: {x: 0, y: 4, z: 0}
---- !u!136 &936016059
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045738000622424}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 3.5
-  m_Height: 9
-  m_Direction: 1
-  m_Center: {x: 0, y: 4, z: 0}
 --- !u!114 &936016056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +165,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetwAtk: 0.5
   atkdmg: 10
+--- !u!114 &455202842248675287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045738000622424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d0dcfd40b9342f380187dbcbc2695b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 1
+  curHealth: 0
 --- !u!1 &1057984957933470
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4602686048034766}
   - component: {fileID: 137135121138864782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pig_mesh_LOD_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4394473986488982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R-Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4006542872789720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L-Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4173817342004434}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boddy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4388182590807488}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4766907385053412}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4043319602937582}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R-Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4574158399058138}
   - component: {fileID: 137010803021447042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pig_mesh_LOD_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4150203481364594}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L-Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4338237056697908}
   - component: {fileID: 137001873277955040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pig_mesh_LOD_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4283042812638862}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}

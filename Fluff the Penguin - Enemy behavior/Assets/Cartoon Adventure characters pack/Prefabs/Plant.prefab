@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4675811960992312}
   - component: {fileID: 137496897166701466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plant_LOD_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4836489395165372}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4058832571509222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4698155742355200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leaf_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4566216589332934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4653433154223612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4614554160670584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L-Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4439111365503524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leaf4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4646763654819372}
   - component: {fileID: 137757118409981982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plant_LOD_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4060215449194866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boddy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4343337689974204}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L-Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4528631746314726}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R-Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4531605360596184}
   - component: {fileID: 137562907840775452}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plant_LOD_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,13 +602,13 @@ GameObject:
   - component: {fileID: 205174437847089506}
   - component: {fileID: 9022809095168424643}
   - component: {fileID: 164299168}
-  - component: {fileID: 164299169}
   - component: {fileID: 164299166}
   - component: {fileID: 164299167}
   - component: {fileID: 164299170}
-  m_Layer: 0
+  - component: {fileID: 1787029994354003070}
+  m_Layer: 9
   m_Name: Plant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -706,20 +706,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &164299169
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647709008156002}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 3.5
-  m_Height: 8
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &164299166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +754,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetwAtk: 0.5
   atkdmg: 10
+--- !u!114 &1787029994354003070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647709008156002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d0dcfd40b9342f380187dbcbc2695b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 1
+  curHealth: 0
 --- !u!1 &1772675447254272
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4930711576831048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leaf2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4186877645557734}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leaf3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4060907395151880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R-Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4689153658689636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4954981797262730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4692217806953472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4484935340389374}
   - component: {fileID: 137211544803767188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pufferfish_mesh_LOD_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4987016633604872}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4833694278207476}
   - component: {fileID: 137918874800237172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pufferfish_mesh_LOD_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4035987887841094}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4315744377996202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4021334332740368}
   - component: {fileID: 137110710435649706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pufferfish_mesh_LOD_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4686356579020688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,13 +498,13 @@ GameObject:
   - component: {fileID: 205805085399952204}
   - component: {fileID: 4872953158342352158}
   - component: {fileID: 1100741829}
-  - component: {fileID: 1100741830}
   - component: {fileID: 1100741827}
   - component: {fileID: 1100741828}
   - component: {fileID: 1891185656309789307}
-  m_Layer: 0
+  - component: {fileID: 4999873858598476192}
+  m_Layer: 9
   m_Name: Pufferfish
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -602,19 +602,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &1100741830
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637764853638648}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1100741827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,6 +650,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetwAtk: 0.5
   atkdmg: 10
+--- !u!114 &4999873858598476192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637764853638648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d0dcfd40b9342f380187dbcbc2695b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 1
+  curHealth: 0
 --- !u!1 &1655372652567904
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4935151028021114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4002279178441970}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4529122663187998}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
