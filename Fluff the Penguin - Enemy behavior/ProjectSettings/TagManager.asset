@@ -11,6 +11,7 @@ TagManager:
   - Power-up
   - Checkpoint
   - Enemy
+  - Teleport
   layers:
   - Default
   - TransparentFX

@@ -7,7 +7,7 @@ public class TutorialKill : MonoBehaviour
 {
     public static int kills;
 
-    private static int goalkills;
+    public static int goalkills;
 
     public GameObject triggerPoint;
 

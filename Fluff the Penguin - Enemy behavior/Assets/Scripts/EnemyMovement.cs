@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         nav = GetComponent<NavMeshAgent>();
+        nav.speed = 17.0f;
     }
 
     // Update is called once per frame

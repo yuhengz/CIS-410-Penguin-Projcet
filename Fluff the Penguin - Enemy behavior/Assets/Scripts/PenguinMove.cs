@@ -5,7 +5,7 @@ using UnityEngine;
 public class PenguinMove : MonoBehaviour
 {
     private Rigidbody rb;
-    private float speed = 10.0f;
+    private float speed = 20.0f;
     private float turnspd = 180f;
     private float turnInput;
     private float move;

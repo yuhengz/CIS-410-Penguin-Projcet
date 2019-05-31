@@ -20,7 +20,7 @@ public class TutorialScript : MonoBehaviour
     void Start()
     {
         eventText.text = "Welcome,Fluff the Penguin!";
-        controlText.text = "Move: Arrow Keys/WASD keys";
+        controlText.text = "Move & Turn: Arrow Keys/WASD keys";
         guideCount = 0;
         scripts = Manager.GetComponents<EnemyManager>();
         for(int i = 0; i < scripts.Length; i++)

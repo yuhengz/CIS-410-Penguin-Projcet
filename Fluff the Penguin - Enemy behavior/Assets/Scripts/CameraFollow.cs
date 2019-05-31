@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;            // The position that that camera will be following.
-    public float smoothing = 5f;        // The speed with which the camera will be following.
+    private float turnspd = 3f;
 
     Vector3 offset;                     // The initial offset from the target.
 
@@ -15,12 +15,14 @@ public class CameraFollow : MonoBehaviour
         offset = transform.position - target.position;
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
-        // Create a postion the camera is aiming for based on the offset from the target.
-        Vector3 targetCamPos = target.position + offset;
+        offset = Quaternion.AngleAxis(Input.GetAxis("Horizontal") * turnspd, Vector3.up) * offset;
 
-        // Smoothly interpolate between the camera's current position and it's target position.
-        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+        // Create a postion the camera is aiming for based on the offset from the target.
+        transform.position = target.position + offset;
+        transform.LookAt(target.position);
+
+
     }
 }
