@@ -9,7 +9,7 @@ public class PenguinMove : MonoBehaviour
     private float turnspd = 180f;
     private float turnInput;
     private float move;
-    private float jumpForce = 12f;
+    private float jumpForce = 15f;
     private PenguinHealth penHP;
     Animator anim;
 
