@@ -5,11 +5,16 @@ using UnityEngine.UI;
 
 public class PenguinHealth : MonoBehaviour
 {
-    public int startHealth = 100;
-    public int curHealth;
+    public static int startHealth = 100;
+    public static int curHealth;
+    public Text controlText;
+    public Text eventText;
     public Text HP;
     public Text GameOver;
+    public static Vector3 revivePoint;
+    public static int lives;
 
+    AudioSource[] audios;
     Animator anim;
     PenguinMove penMove;
 
@@ -21,22 +26,35 @@ public class PenguinHealth : MonoBehaviour
         //Set up references.
         anim = GetComponent<Animator>();
         penMove = GetComponent<PenguinMove>();
+        audios = GetComponents<AudioSource>();
 
-        //Set initial health
+        //Set initial health and lives
         curHealth = startHealth;
         HP.text = "Health: " + curHealth;
         GameOver.text = "";
+        lives = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Check if damaged to update HP UI and reset damaged flag.(Will have Health UI HUD set up here).
-        if (damaged)
-        {
-            //*TASK*Insert HP UI coding here.
-        }
         damaged = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    { 
+        if (other.gameObject.CompareTag("Checkpoint"))
+        {
+            revivePoint = other.gameObject.transform.position;
+            other.gameObject.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("Health"))
+        {
+            other.gameObject.SetActive(false);
+            audios[2].Play();
+            curHealth += 20;
+            HP.text = "Health: " + curHealth;
+        }
     }
 
     public void TakeDamage(int amount)
@@ -51,10 +69,22 @@ public class PenguinHealth : MonoBehaviour
         //Checks if player/penguin lost all its health and death flag is not set.
         if (curHealth <= 0 && !isDead)
         {
-
             HP.text = "Health: " + 0;
-            //DED, amen
-            Death();
+            lives -= 1;
+            if (lives >= 1)//if you got some lives left...
+            {//respawn to checkpoint
+                transform.position = revivePoint;
+                curHealth = startHealth;
+                HP.text = "Health: " + curHealth;
+                controlText.text = "You now have "+ lives + " lives left...";
+                eventText.text = "";
+            }
+            else
+            {
+                //DED, amen
+                Death();
+            }
+
         }
     }
 
@@ -67,6 +97,9 @@ public class PenguinHealth : MonoBehaviour
 
         penMove.enabled = false;
 
+        controlText.text = "";
+        eventText.text = "";
         GameOver.text = "Game Over...";
+
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileHit : MonoBehaviour
 {
     public LayerMask EnemyMask;
-    public int damage = 1;
+    public static int damage = 1;
     public float MaxLifeTime = 1f;
     // Start is called before the first frame update
     private void Start()

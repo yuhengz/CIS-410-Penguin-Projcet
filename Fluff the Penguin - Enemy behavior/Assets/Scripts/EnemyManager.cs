@@ -5,14 +5,19 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     private int count = 0;
+    private EnemyHealth tutorialHP;
+    private EnemyMovement tutorialMove;
     public PenguinHealth penHP;
     public GameObject enemy;
     public float spawnTime = 3.0f;
-    public int maxSpawn = 1;
     public Transform[] spawnPoints;
 
     void OnEnable()
     {
+        tutorialHP = enemy.GetComponent<EnemyHealth>();
+        tutorialMove = enemy.GetComponent<EnemyMovement>();
+        tutorialHP.startHealth = 1;
+        tutorialMove.nav.speed = 17.0f;
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
@@ -24,7 +29,7 @@ public class EnemyManager : MonoBehaviour
             return;
         }
 
-        if (penHP.curHealth <= 0)
+        if (PenguinHealth.lives <= 0)
         {
             CancelInvoke();
             return;

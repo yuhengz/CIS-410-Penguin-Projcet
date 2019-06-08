@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;            // The position that that camera will be following.
+    public GameObject Peng;            // The position that that camera will be following.
     private float turnspd = 3f;
+    private Transform target;
+    private Rigidbody body;
 
     Vector3 offset;                     // The initial offset from the target.
 
     void Start()
     {
         // Calculate the initial offset.
+        target = Peng.GetComponent<Transform>();
+        body = Peng.GetComponent<Rigidbody>();
         offset = transform.position - target.position;
     }
 
@@ -23,6 +27,15 @@ public class CameraFollow : MonoBehaviour
         transform.position = target.position + offset;
         transform.LookAt(target.position);
 
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            body.constraints = RigidbodyConstraints.FreezeRotationY;
+            body.constraints = ~RigidbodyConstraints.FreezeRotationY;
+            body.constraints = ~RigidbodyConstraints.FreezePosition;
+            Vector3 reset = target.eulerAngles;
+            reset.y= transform.eulerAngles.y;
+            reset.x = 0;
+            target.eulerAngles = reset;
+        }
     }
 }

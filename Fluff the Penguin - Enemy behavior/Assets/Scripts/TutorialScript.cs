@@ -12,7 +12,6 @@ public class TutorialScript : MonoBehaviour
     public GameObject Wall1;
     public GameObject Wall2;
     public GameObject Wall3;
-    public GameObject Checkpoint;
     public GameObject Manager;
 
     private EnemyManager[] scripts;
@@ -32,18 +31,13 @@ public class TutorialScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Checkpoint.activeInHierarchy == false)
+        if (guideCount < 7)
         {
-            eventText.text = "You Cleared the Tutorial!";
-            controlText.text = "Congratulations!";
+        CheckGuide(guidePoints, guideCount);
         }
-        else
+        if (guideCount < 7 && guidePoints[guideCount].activeInHierarchy == false)
         {
-            CheckGuide(guidePoints, guideCount);
-            if (guideCount < 7 && guidePoints[guideCount].activeInHierarchy == false)
-            {
-                guideCount = guideCount + 1;
-            }
+            guideCount = guideCount + 1;
         }
     }
 
@@ -85,7 +79,8 @@ public class TutorialScript : MonoBehaviour
         }
         else if (Points[Count].activeInHierarchy == false && Count == 6)
         {
-            eventText.text = "IT's TIME FOR A DEATH BATTLE!";
+            PenguinHealth.revivePoint = Points[Count].transform.position;
+            eventText.text = "IT'S TIME FOR A DEATH BATTLE!";
             controlText.text = "Attack: B key";
             Wall2.SetActive(true);
             Manager.SetActive(true);

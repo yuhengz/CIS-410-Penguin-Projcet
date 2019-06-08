@@ -11,6 +11,7 @@ public class EnemyAttack : MonoBehaviour
     Animator anim;
     GameObject penguin;
     PenguinHealth penHP;
+    AudioSource[] audios;
 
     bool PenInRange;
     float timer;
@@ -19,6 +20,7 @@ public class EnemyAttack : MonoBehaviour
     {
         penguin = GameObject.FindGameObjectWithTag("Player");
         penHP = penguin.GetComponent<PenguinHealth>();
+        audios = GetComponents<AudioSource>();
 
         anim = GetComponent<Animator>();
     }
@@ -50,7 +52,7 @@ public class EnemyAttack : MonoBehaviour
         timer += Time.deltaTime;
 
         //When the timer exceeds time between attacks and when player/penguin is in range.
-        if(timer >= timeBetwAtk && PenInRange && penHP.curHealth >0)
+        if(timer >= timeBetwAtk && PenInRange && PenguinHealth.curHealth > 0)
         {
             //Take a swing.
             anim.SetTrigger("AttackPlayer");
@@ -58,7 +60,7 @@ public class EnemyAttack : MonoBehaviour
             anim.SetTrigger("KeepWalking");
         }
 
-        if(penHP.curHealth <= 0)
+        if(PenguinHealth.lives == 0)
         {
             anim.SetTrigger("PlayerDead");
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
@@ -71,9 +73,10 @@ public class EnemyAttack : MonoBehaviour
         timer = 0f;
 
         //If player/penguin still have HP
-        if(penHP.curHealth > 0)
+        if(PenguinHealth.curHealth > 0)
         {
             //Damage player.
+            audios[1].Play();
             penHP.TakeDamage(atkdmg);
         }
     }

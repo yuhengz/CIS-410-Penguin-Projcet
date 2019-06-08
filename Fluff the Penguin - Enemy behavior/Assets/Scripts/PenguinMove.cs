@@ -10,8 +10,9 @@ public class PenguinMove : MonoBehaviour
     private float turnInput;
     private float move;
     private float jumpForce = 15f;
-    private PenguinHealth penHP;
+    public GameObject projectile;
     Animator anim;
+    AudioSource[] audios;
 
     public bool grounded;
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class PenguinMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        penHP = GetComponent<PenguinHealth>();
+        audios = GetComponents<AudioSource>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -38,6 +39,7 @@ public class PenguinMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
+            audios[1].Play();
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             grounded = false;
         }
@@ -57,6 +59,7 @@ public class PenguinMove : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Speed-up"))
         {
+            audios[3].Play();
             other.gameObject.SetActive(false);
             speed = 2.0f * speed;
         }
@@ -64,18 +67,15 @@ public class PenguinMove : MonoBehaviour
         {
             other.gameObject.SetActive(false);
         }
-        else if (other.gameObject.CompareTag("Health"))
-        {
-            other.gameObject.SetActive(false);
-            penHP.curHealth += 20;
-        }
-        else if (other.gameObject.CompareTag("Checkpoint"))
-        {
-            other.gameObject.SetActive(false);
-        }
         else if (other.gameObject.CompareTag("Power-up"))
         {
+            audios[4].Play();
+            ProjectileHit.damage = 2 * ProjectileHit.damage;
             other.gameObject.SetActive(false);
+        }
+        if (other.gameObject.CompareTag("ShinyRock"))
+        {
+            audios[5].Play();
         }
     }
 
