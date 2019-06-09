@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 2613034547597456801}
   m_Layer: 0
   m_Name: ShinyRock
-  m_TagString: Untagged
+  m_TagString: ShinyRock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2613034548063486118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 92.95183, z: 0}
+  m_LocalPosition: {x: 0, y: 105.9518, z: 0}
   m_LocalScale: {x: 1250, y: 30, z: 1250}
   m_Children: []
   m_Father: {fileID: 2613034549175440877}
@@ -221,7 +221,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2613034548063486118}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

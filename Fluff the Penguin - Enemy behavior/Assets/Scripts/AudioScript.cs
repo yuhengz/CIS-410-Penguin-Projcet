@@ -14,6 +14,7 @@ public class AudioScript : MonoBehaviour
     void Start()
     {
         audios = GetComponents<AudioSource>();
+        audios[0].Play();
         playing = false;
         get = false;
     }

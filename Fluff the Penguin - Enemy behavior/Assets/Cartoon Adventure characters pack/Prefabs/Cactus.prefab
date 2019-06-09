@@ -638,7 +638,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 3
-  m_Speed: 19.5
+  m_Speed: 17
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d0dcfd40b9342f380187dbcbc2695b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 16
+  startHealth: 1
   curHealth: 0
 --- !u!82 &1824732200
 AudioSource:

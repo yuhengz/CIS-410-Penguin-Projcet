@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PenguinHealth : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class PenguinHealth : MonoBehaviour
     bool isDead;
     bool damaged;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         //Set up references.
         anim = GetComponent<Animator>();
@@ -39,6 +40,11 @@ public class PenguinHealth : MonoBehaviour
     void Update()
     {
         damaged = false;
+
+        if(Input.GetKeyDown(KeyCode.Return) && isDead == true)
+        {
+            SceneManager.LoadScene("TutorialLevel");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -97,9 +103,9 @@ public class PenguinHealth : MonoBehaviour
 
         penMove.enabled = false;
 
-        controlText.text = "";
         eventText.text = "";
         GameOver.text = "Game Over...";
+        controlText.text = "Press Enter (Return) to restart game";
 
     }
 }

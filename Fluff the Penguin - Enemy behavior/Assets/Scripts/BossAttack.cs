@@ -21,7 +21,7 @@ public class BossAttack : MonoBehaviour
     bool PenInRange;
     float timer;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         penguin = GameObject.FindGameObjectWithTag("Player");
         penHP = penguin.GetComponent<PenguinHealth>();
